@@ -11,15 +11,12 @@ export default function App() {
       ...currentCourseGoals,
       { text: enteredGoalsText, id: Math.random().toString() },
     ]);
-    console.log(courseGoals);
-    //setEnteredGoalsText('');
   };
 
   const deleteGoalHandler = (id) => {
     setCourseGoals((currentCourseGoals) => {
       return currentCourseGoals.filter((goal) => goal.id !== id);
     });
-    //console.log("BY", index);
   };
 
   return (
